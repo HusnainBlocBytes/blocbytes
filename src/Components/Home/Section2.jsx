@@ -13,7 +13,7 @@ const Section2 = () => {
       </div>
       <p className="lg:px-16 font-inter text-[22px] font-normal text-[#03045E]">
         The splendor in{" "}
-        <span className="bg-[#00ADD3] text-[#03045E] px-2 rounded-xl">what we do!</span>
+        <span className="bg-[#90e0ef] text-[#03045E] px-2 rounded-xl">what we do!</span>
       </p>
 
       {/* First 2 Grid */}

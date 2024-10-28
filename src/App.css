@@ -1,3 +1,10 @@
 body{
     overflow-x: hidden  ;
 }
+
+.oval {
+    /* width: "full";
+    height: "full"; */
+    /* background: red; */
+    border-radius: 200px / 160px;
+  }

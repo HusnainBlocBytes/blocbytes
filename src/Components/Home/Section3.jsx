@@ -1,5 +1,6 @@
 import React from "react";
 import backgroundImage from "../../Images/Images/Services_section_bg.png";
+import backgroundImage2 from "../../Images/Images/Services_section2_bg.png";
 import IconImage from "../../Images/Icons/Text_1_image.png";
 import IconImage2 from "../../Images/Icons/Text_2_image.png";
 
@@ -90,9 +91,18 @@ const Section3 = () => {
         the future
         </p>
       </div>
-      <div className="bg-[#90E0EF] p-6 md:p-12 lg:p-22 mx-4 md:mx-20 pt-1 mt-0">
-        <p className="lg:text-[80px]  font-semibold text-[#03045E] lg:leading-[117px] font-inter max-w-lg">How We Make It Work</p>
-      </div>
+      <div 
+  className="p-6 md:p-12 lg:p-22 mx-4 md:mx-20 pt-1 mt-0" 
+  style={{ 
+    backgroundImage: `url(${backgroundImage2})`,
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center' 
+  }}
+>
+  <p className="lg:text-[80px] font-semibold text-[#FFFFFF] lg:leading-[117px] font-inter max-w-lg">
+    How We Make It Work
+  </p>
+</div>
     </>
   );
 };

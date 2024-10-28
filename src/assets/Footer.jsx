@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import getintouch from "../Images/Icons/footer_icon.png"
+import ContactModal from "./ContactModal";
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => setIsModalOpen(true);
+  const handleModalClose = () => setIsModalOpen(false);
   return (
     <div>
       {/* <!-- Footer container --> */}
@@ -11,11 +16,19 @@ const Footer = () => {
     <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
       {/* TW Elements section */}
       <div>
-        <p className="text-[34px] md:text-[34px] text-[#FFFFFF] font-light font-inter leading-[43px] ">
-          Ready to revolutionize your business communications with BlocBytes.
-        </p>
-        <button className="text-white font-bold font-inter mt-6 text-[12px] leading-[27px] bg-[#00ADD3] py-3 px-6 rounded-full">GET IN TOUCH</button>
-      </div>
+      <p className="text-[34px] md:text-[34px] text-[#FFFFFF] font-light font-inter leading-[43px] ">
+        Ready to revolutionize your business communications with BlocBytes.
+      </p>
+      <button
+        onClick={handleModalOpen}
+        className="text-white font-bold font-inter mt-6 text-[12px] leading-[27px] bg-[#00ADD3] py-3 px-6 rounded-full"
+      >
+        GET IN TOUCH
+      </button>
+      
+      {/* Modal Component */}
+      <ContactModal isOpen={isModalOpen} onClose={handleModalClose} />
+    </div>
       {/* Contact section */}
       <div className="">
         <h6 className="mb-4 flex justify-center font-bold text-[#00ADD3] uppercase md:justify-start">
