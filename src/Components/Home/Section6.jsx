@@ -91,9 +91,9 @@ const Section6 = () => {
         </div>
       </div>
 
-      <div>
-        <img className="mt-6  bg-no-repeat mx-aut " src={image} alt="" />
-      </div>
+      <div className="flex justify-center overflow-hidden">
+        <img className="mt-6 w-full h-auto max-w-full" src={image} alt="Home Banner" />
+    </div>
     </div>
   );
 };
