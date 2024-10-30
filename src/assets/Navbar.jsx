@@ -30,15 +30,15 @@ const Navbar = () => {
       <motion.nav className=" border-solid border-gray-200  mx-auto px-4 sm:px-6 lg:px-8 py-3 bg-[#03045E] z-50"
       
       >
-        <div className="">
-          <div className="w-full flex flex-col lg:flex-row">
-            <motion.div className="flex justify-between items-center w-full lg:w-auto"
+        <div className="mx-aut">
+          <div className=" flex flex-col lg:flex-row">
+            <motion.div className="flex justify-between items-center  lg:w-auto"
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
             >
-              <Link href="/" className="flex items-center">
+              <Link to="/" className="flex items-center ml-6 ">
                 <img src={defaultlogo} alt="Logo" />
               </Link>
               <div className="lg:hidden">
@@ -51,18 +51,18 @@ const Navbar = () => {
               </div>
             </motion.div>
 
-            <motion.div className="hidden lg:flex lg:pl-11 w-full"
+            <motion.div className="hidden lg:flex lg:pl-11 "
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
             >
-              <ul className="flex items-center flex-col mt-4 lg:mt-0 lg:ml-auto lg:flex-row gap-4">
+              <ul className="flex items-center flex-col mt-4  lg:mt-0 lg:ml-auto lg:flex-row gap-4">
                 {navigation.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      className="flex items-center justify-between text-[#90E0EF] text-[15px] lg:text-base font-medium transition-all duration-500 mb-2 lg:mr-6 md:mb-0 md:mr-3"
+                      className="flex items-center justify-between text-[#FFFFFF] hover:text-[#90E0EF] text-[15px] lg:text-base font-medium transition-all duration-500 mb-2 lg:mr-6 md:mb-0 md:mr-3"
                     >
                       {item.name}
                     </a>
@@ -76,7 +76,7 @@ const Navbar = () => {
         {/* Mobile Menu Dialog */}
         <Dialog open={mobileMenuOpen} onClose={handleClose} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#03045E] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50  overflow-y-auto bg-[#03045E] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               {/* <a href="/" className="-m-1.5 p-1.5">
                 <img alt="Logo" src={defaultlogo} className="h-8 w-auto" />

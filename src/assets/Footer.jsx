@@ -4,7 +4,6 @@ import ContactModal from "./ContactModal";
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const handleModalOpen = () => setIsModalOpen(true);
   const handleModalClose = () => setIsModalOpen(false);
   return (
@@ -74,7 +73,7 @@ const Footer = () => {
          <p className="text-[#FFFFFF]">+18483458762</p>
         </p>
         <p className="flex items-center justify-center md:justify-start text-base md:text-[17px]">
-        <span class="me-3 [&>svg]:h-5 [&>svg]:w-5 text-[#00ADD3]">
+        <span className="me-3 [&>svg]:h-5 [&>svg]:w-5 text-[#00ADD3]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

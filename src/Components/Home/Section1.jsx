@@ -16,7 +16,7 @@ const Section1 = () => {
           backgroundPosition : "top 10px",
         }}
       >
-        <div className="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
+        <div className="mx-auto   px-4 sm:px-6 lg:px-8 relative text-center">
           <motion.div className="p-1 w-60 rounded-full flex items-center mb-4"
           variants={fadeIn("right", 0.3)}
           initial="hidden"

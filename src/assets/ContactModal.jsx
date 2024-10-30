@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 
 const ContactModal = ({ isOpen, onClose }) => {
@@ -27,23 +27,23 @@ const ContactModal = ({ isOpen, onClose }) => {
       const signal = controller.signal;
 
       const timeoutId = setTimeout(() => {
-        controller.abort(); // Abort the request after timeout
+        controller.abort();
         reject(new Error('Request timed out'));
       }, timeout);
 
       emailjs.send(
-        'service_hd18zs9',  // Replace with your EmailJS Service ID
-        'template_42uc8fv',  // Replace with your EmailJS Template ID
+        'service_etno96a',  // Replace with your EmailJS Service ID
+        'template_yl8ix97',  // Replace with your EmailJS Template ID
         formData,
-        'x0EtSmuHKCrY5xT9Z',  // Replace with your EmailJS User ID
+        'rgUhielbLTPR_Xxf5',  // Replace with your EmailJS User ID
         { signal }
       )
       .then((response) => {
-        clearTimeout(timeoutId); // Clear timeout on successful response
+        clearTimeout(timeoutId);
         resolve(response);
       })
       .catch((error) => {
-        clearTimeout(timeoutId); // Clear timeout on error as well
+        clearTimeout(timeoutId);
         reject(error);
       });
     });
@@ -73,12 +73,40 @@ const ContactModal = ({ isOpen, onClose }) => {
       });
   };
 
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => {
+        setError('');
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
+
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        onClose();
+        setIsSubmitted(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted, onClose]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-lg w-full max-w-md relative">
-        <button className="absolute top-2 right-2 text-gray-500" onClick={onClose}>
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      onClick={onClose} // Close on clicking overlay
+    >
+      <div
+        className="bg-white p-8 rounded-lg w-full max-w-md relative"
+        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+      >
+        <button
+          className="absolute top-2 right-2 text-gray-500 text-3xl" // Increased size for cross button
+          onClick={onClose}
+        >
           &times;
         </button>
         <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>

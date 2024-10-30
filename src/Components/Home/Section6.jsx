@@ -125,7 +125,7 @@ const Section6 = () => {
       </motion.div>
 
       <div className="flex justify-center overflow-hidden">
-        <img className="mt-6 w-full h-auto max-w-full" src={image} alt="Home Banner" />
+        <img className="mt-6  h-auto " src={image} alt="Home Banner" />
     </div>
     </div>
   );
