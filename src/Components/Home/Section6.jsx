@@ -124,9 +124,9 @@ const Section6 = () => {
         </div>
       </motion.div>
 
-      <div className="flex justify-center overflow-hidden">
+      {/* <div className=" flex justify-center overflow-hidden">
         <img className="mt-6  h-auto " src={image} alt="Home Banner" />
-    </div>
+    </div> */}
     </div>
   );
 };

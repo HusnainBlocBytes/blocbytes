@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 // Varient
 import { fadeIn } from "../variants";
 
-
 const navigation = [
   { name: 'Home', href: '#' },
   { name: 'Services', href: '#' },
@@ -26,61 +25,59 @@ const Navbar = () => {
 
   return (
     <>
-    {/* fixed top-0 */}
-      <motion.nav className=" border-solid border-gray-200  mx-auto px-4 sm:px-6 lg:px-8 py-3 bg-[#03045E] z-50"
-      
-      >
-        <div className="mx-aut">
-          <div className=" flex flex-col lg:flex-row">
-            <motion.div className="flex justify-between items-center  lg:w-auto"
+      <motion.nav className="border-solid border-gray-200 mx-auto px-4 sm:px-6 lg:px-8 py-3 bg-[#03045E] z-50">
+        <div className="flex justify-between items-center">
+          {/* Logo Section */}
+          <motion.div
+            className="flex items-center"
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            >
-              <Link to="/" className="flex items-center ml-6 ">
-                <img src={defaultlogo} alt="Logo" />
-              </Link>
-              <div className="lg:hidden">
-                <button
-                  onClick={handleOpen}
-                  className="text-gray-200 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                >
-                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                </button>
-              </div>
-            </motion.div>
+          >
+            <Link to="/" className="flex items-center ml-6">
+              <img src={defaultlogo} alt="Logo" />
+            </Link>
+          </motion.div>
 
-            <motion.div className="hidden lg:flex lg:pl-11 "
+          {/* Navigation Links for Desktop */}
+          <motion.div
+            className="hidden lg:flex lg:pl-11"
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
+          >
+            <ul className="flex items-center gap-4">
+              {navigation.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="flex items-center justify-between text-[#FFFFFF] hover:text-[#90E0EF] text-[15px] lg:text-base font-medium transition-all duration-500 mb-2 lg:mr-6 md:mb-0 md:mr-3"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <button
+              onClick={handleOpen}
+              className="text-gray-200 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
-              <ul className="flex items-center flex-col mt-4  lg:mt-0 lg:ml-auto lg:flex-row gap-4">
-                {navigation.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="flex items-center justify-between text-[#FFFFFF] hover:text-[#90E0EF] text-[15px] lg:text-base font-medium transition-all duration-500 mb-2 lg:mr-6 md:mb-0 md:mr-3"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            </button>
           </div>
         </div>
 
         {/* Mobile Menu Dialog */}
         <Dialog open={mobileMenuOpen} onClose={handleClose} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50  overflow-y-auto bg-[#03045E] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 overflow-y-auto bg-[#03045E] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              {/* <a href="/" className="-m-1.5 p-1.5">
-                <img alt="Logo" src={defaultlogo} className="h-8 w-auto" />
-              </a> */}
               <button
                 type="button"
                 onClick={handleClose}
