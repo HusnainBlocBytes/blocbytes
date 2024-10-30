@@ -3,6 +3,11 @@ import { Dialog, DialogPanel } from '@headlessui/react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import defaultlogo from "../Images/Logos/LOGO.png";
+// motion
+import { motion } from "framer-motion";
+// Varient
+import { fadeIn } from "../variants";
+
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -22,13 +27,20 @@ const Navbar = () => {
   return (
     <>
     {/* fixed top-0 */}
-      <nav className=" border-solid border-gray-200  mx-auto px-4 sm:px-6 lg:px-8 py-3 bg-[#03045E] z-50">
+      <motion.nav className=" border-solid border-gray-200  mx-auto px-4 sm:px-6 lg:px-8 py-3 bg-[#03045E] z-50"
+      
+      >
         <div className="">
           <div className="w-full flex flex-col lg:flex-row">
-            <div className="flex justify-between items-center w-full lg:w-auto">
-              <a href="/" className="flex items-center">
+            <motion.div className="flex justify-between items-center w-full lg:w-auto"
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            >
+              <Link href="/" className="flex items-center">
                 <img src={defaultlogo} alt="Logo" />
-              </a>
+              </Link>
               <div className="lg:hidden">
                 <button
                   onClick={handleOpen}
@@ -37,9 +49,14 @@ const Navbar = () => {
                   <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="hidden lg:flex lg:pl-11 w-full">
+            <motion.div className="hidden lg:flex lg:pl-11 w-full"
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            >
               <ul className="flex items-center flex-col mt-4 lg:mt-0 lg:ml-auto lg:flex-row gap-4">
                 {navigation.map((item) => (
                   <li key={item.name}>
@@ -52,7 +69,7 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -90,7 +107,7 @@ const Navbar = () => {
             </div>
           </DialogPanel>
         </Dialog>
-      </nav>
+      </motion.nav>
     </>
   );
 };

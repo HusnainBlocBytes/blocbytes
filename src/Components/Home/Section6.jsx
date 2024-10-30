@@ -1,25 +1,48 @@
 import React from "react";
 import image from "../../Images/Images/Why_us_section2_image.png";
 import Image1 from "../../Images/Images/Why_us_section3_image.png";
+import { motion } from "framer-motion";
+// Varient
+import { fadeIn } from "../../variants";
 
 const Section6 = () => {
   return (
     <div>
       <div className="py-6 flex items-center">
-        <span className="lg:px-16 font-inter text-[45px] font-medium text-[#03045E]">
+        <motion.span className="lg:px-16 font-inter text-[45px] font-medium text-[#03045E]"
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+        >
           Why US?
-        </span>
-        <div className="flex-grow ">
+        </motion.span>
+        <motion.div className="flex-grow "
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.3 }}
+        >
           <hr className="h-px bg-[#03045E] border-0" />
-        </div>
+        </motion.div>
       </div>
-      <p className="lg:px-16 font-inter text-[22px] font-normal text-[#03045E]">
+      <motion.p className="lg:px-16 font-inter text-[22px] font-normal text-[#03045E]"
+      variants={fadeIn("right", 0.9)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         Why Choose{" "}
         <span className="bg-[#90e0ef] text-[#03045E] px-2 rounded-xl">
           Blocbytes
         </span>
-      </p>
-      <div className="my-6 px-4">
+      </motion.p>
+      <motion.div className="my-6 px-4"
+      variants={fadeIn("left", 0.6)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <p className="text-center font-medium font-inter text-[#03045E] leading-relaxed border border-[#90E0EF] rounded-[50%] max-w-4xl mx-auto p-8 sm:p-6 md:p-8 lg:px-28 lg:py-16 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
           BlocBytes isn't just about tech, it's about partnership. We bring{" "}
           <span className="bg-[#90e0ef] text-[#03045E] px-2 rounded-xl">
@@ -36,14 +59,24 @@ const Section6 = () => {
           </span>{" "}
           Together, let’s shape the future, one byte at a time.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="">
+      <motion.div className=""
+      variants={fadeIn("right", 0.4)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <p className="lg:px-16 text-[24px] leading-[32px] font-black font-inter text-[#03045E]">
           WHY US?
         </p>
-      </div>
-      <div className="flex flex-col lg:flex-row items-center lg:items-start mt-6 lg:px-16">
+      </motion.div>
+      <motion.div className="flex flex-col lg:flex-row items-center lg:items-start mt-6 lg:px-16"
+      variants={fadeIn("left", 0.5)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         {/* Left side - Text Content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 max-w-md sm:max-w-2xl">
           {/* 1st row */}
@@ -89,7 +122,7 @@ const Section6 = () => {
         <div className="mt-6 lg:mt-auto  lg:ml-auto flex-shrink-0 mt-auto">
           <img src={Image1} alt="Description of image" className="h-[120px]" />
         </div>
-      </div>
+      </motion.div>
 
       <div className="flex justify-center overflow-hidden">
         <img className="mt-6 w-full h-auto max-w-full" src={image} alt="Home Banner" />

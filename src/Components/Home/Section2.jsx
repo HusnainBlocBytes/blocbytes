@@ -1,23 +1,42 @@
 import React from "react";
+// motion
+import { motion } from "framer-motion";
+// Varient
+import { fadeIn } from "../../variants";
 
 const Section2 = () => {
   return (
     <div className="mx-auto  px-4 sm:px-6 lg:px-8">
-      <div className="py-6 flex items-center">
+      <motion.div className="py-6 flex items-center"
+      variants={fadeIn("right", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <span className="lg:px-16 font-inter text-[45px] font-medium text-[#03045E]">
           Services
         </span>
         <div className="flex-grow ">
           <hr className="h-px bg-[#03045E] border-0" />
         </div>
-      </div>
-      <p className="lg:px-16 font-inter text-[22px] font-normal text-[#03045E]">
+      </motion.div>
+      <motion.p className="lg:px-16 font-inter text-[22px] font-normal text-[#03045E]"
+      variants={fadeIn("right", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         The splendor in{" "}
         <span className="bg-[#90e0ef] text-[#03045E] px-2 rounded-xl">what we do!</span>
-      </p>
+      </motion.p>
 
       {/* First 2 Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6"
+      variants={fadeIn("left", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="flex flex-row justify-center items-center">
           <div className="font-inter text-[100px] leading-[110px] font-medium text-[#03045E]">
             01
@@ -46,10 +65,15 @@ const Section2 = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Single Grid Item */}
-      <div className="flex flex-row justify-center items-center mt-12">
+      <motion.div className="flex flex-row justify-center items-center mt-12"
+      variants={fadeIn("up", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="font-inter text-[100px] leading-[110px] font-medium text-[#03045E]">
           03
         </div>
@@ -62,10 +86,15 @@ const Section2 = () => {
             our development.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Second 2 Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6"
+      variants={fadeIn("right", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="flex flex-row justify-center items-center">
           <div className="font-inter text-[100px] leading-[110px] font-medium text-[#03045E]">
             04
@@ -94,10 +123,15 @@ const Section2 = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Single Grid Item */}
-      <div className="flex flex-row justify-center items-center mt-12">
+      <motion.div className="flex flex-row justify-center items-center mt-12"
+      variants={fadeIn("up", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="font-inter text-[100px] leading-[110px] font-medium text-[#03045E]">
           06
         </div>
@@ -110,10 +144,15 @@ const Section2 = () => {
             meets creative expression.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Third 2 Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6"
+      variants={fadeIn("right", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="flex flex-row justify-center items-center">
           <div className="font-inter text-[100px] leading-[110px] font-medium text-[#03045E]">
             07
@@ -142,7 +181,7 @@ const Section2 = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

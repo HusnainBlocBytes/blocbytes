@@ -1,4 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
+// Varient
+import { fadeIn } from "../../variants";
 
 const RoadmapStep = ({ number, title, description }) => (
   <div className="relative py-6 px-6">
@@ -7,14 +10,24 @@ const RoadmapStep = ({ number, title, description }) => (
 
     {/* Content container */}
     <div className="relative">
-      <div className="font-inter text-[17px] leading-[24px] font-bold text-[#03045E] uppercase">
+      <motion.div className="font-inter text-[17px] leading-[24px] font-bold text-[#03045E] uppercase"
+      variants={fadeIn("right", 0.4)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         {number}. {title}
-      </div>
-      <div className="ml-2">
+      </motion.div>
+      <motion.div className="ml-2"
+      variants={fadeIn("left", 0.8)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         <p className="font-inter leading-[24px] text-[16px] text-[#000000] font-medium mt-4">
           {description}
         </p>
-      </div>
+      </motion.div>
     </div>
   </div>
 );
@@ -22,9 +35,14 @@ const RoadmapStep = ({ number, title, description }) => (
 const Section4 = () => {
   return (
     <div className="bg-[#FFFFFF] p-4 md:p-12 lg:p-18 mx-2 md:mx-8 pt-1 mt-0">
-      <p className="font-medium text-[#000000] font-italic text-[25px] leading-[38px]">
+      <motion.p className="font-medium text-[#000000] font-italic text-[25px] leading-[38px]"
+      variants={fadeIn("right", 0.3)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.3 }}
+      >
         Here is the road map for how we make our solutions happen.
-      </p>
+      </motion.p>
 
       {/* Roadmap grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">

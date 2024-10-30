@@ -1,4 +1,8 @@
 import React from "react";
+// motion
+import { motion } from "framer-motion";
+// Varient
+import { fadeIn } from "../../variants";
 import backgroundImage from "../../Images/Images/Hero_section_bg.png"; // Adjust the path to your image file
 
 
@@ -13,7 +17,12 @@ const Section1 = () => {
         }}
       >
         <div className="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <div className="p-1 w-60 rounded-full flex items-center mb-4">
+          <motion.div className="p-1 w-60 rounded-full flex items-center mb-4"
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+          >
             <span className="font-inter lg:text-[14px] font-normal text-[#00ADD3]">
               Solutions
             </span>
@@ -21,12 +30,22 @@ const Section1 = () => {
             <span className="font-inter text-[14px] font-normal text-[#00ADD3]">
               that scale
             </span>
-          </div>
+          </motion.div>
 
-          <h1 className="uppercase max-w-2xl mt-12 mx-auto text-center font-inter font-black lg:text-7xl text-[#FFFFFF] mb-5 md:text-4xl text-4xl lg:leading-[90px]">
+          <motion.h1 className="uppercase max-w-2xl mt-12 mx-auto text-center font-inter font-black lg:text-7xl text-[#FFFFFF] mb-5 md:text-4xl text-4xl lg:leading-[90px]"
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+          >
             Building Bytes <span>In Blocs</span>
-          </h1>
-          <div className="p-1 mt-12 rounded-full flex lg:justify-end items-center mb-4">
+          </motion.h1>
+          <motion.div className="p-1 mt-12 rounded-full flex lg:justify-end items-center mb-4"
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+          >
             <span className="font-inter text-[14px] font-normal lg:text-right text-[#00ADD3]">
             Code
             </span>
@@ -34,10 +53,15 @@ const Section1 = () => {
             <span className="font-inter text-[14px] font-normal text-[#00ADD3]">
             that excels
             </span>
-          </div>
-          <p className="uppercase max-w-md mt-12 ml-auto font-inter font-medium text-[24px] lg:text-right text-[#FFFFFF] mb-5 leading-[37px]">
+          </motion.div>
+          <motion.p className="uppercase max-w-md mt-12 ml-auto font-inter font-medium text-[24px] lg:text-right text-[#FFFFFF] mb-5 leading-[37px]"
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+          >
             From simple concept to complex codes, we know what you need!
-          </p>
+          </motion.p>
         </div>
       </div>
     </>
