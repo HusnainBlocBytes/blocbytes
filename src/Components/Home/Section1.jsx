@@ -13,7 +13,7 @@ const Section1 = () => {
         className="pt-8 lg:pt-32 lg:h-screen h-[75vh] bg-[#03045E] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition : "top 10px",
+          backgroundPosition : "center -100px",
         }}
       >
         <div className="mx-auto   px-4 sm:px-6 lg:px-8 relative text-center">
