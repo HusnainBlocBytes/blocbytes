@@ -87,7 +87,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       const timer = setTimeout(() => {
         onClose();
         setIsSubmitted(false);
-      }, 5000);
+      }, 6000);
       return () => clearTimeout(timer);
     }
   }, [isSubmitted, onClose]);
@@ -138,7 +138,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-sm font-medium mb-2">Email*</label>
+              <label className="block text-sm font-medium mb-2">Email <span className='text-red-500'>*</span></label>
               <input
                 type="email"
                 name="email"
@@ -149,7 +149,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-sm font-medium mb-2">Contact Number*</label>
+              <label className="block text-sm font-medium mb-2">Contact Number<span className='text-red-500'>*</span></label>
               <input
                 type="tel"
                 name="contactNumber"
@@ -160,7 +160,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-sm font-medium mb-2">Leave Your Message Here*</label>
+              <label className="block text-sm font-medium mb-2">Leave Your Message Here<span className='text-red-500'>*</span></label>
               <textarea
                 name="message"
                 value={formData.message}
