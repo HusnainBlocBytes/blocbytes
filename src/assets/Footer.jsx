@@ -46,10 +46,9 @@ const Footer = () => {
                 <img className="me-3" src={getintouch} alt="" />
                 Get Directions
               </p>
-              <p className="mt-2 text-[17px] font-semibold leading-[27px] font-inter text-[#90E0EF]">PHONE</p><p>
-              +18483458762</p>
+              <p className="mt-2 text-[17px] font-semibold leading-[27px] font-inter text-[#90E0EF]">PHONE</p><p><a href="tel:+18483458762">+18483458762</a></p>
               <p className="mt-2 text-[17px] font-semibold leading-[27px] font-inter text-[#90E0EF]">EMAIL</p><p>
-              <a href= "mailto: info@blocbytes.com">info@blocbytes.com</a></p>
+                <a href="mailto: info@blocbytes.com">info@blocbytes.com</a></p>
             </div>
             <div className="px-4 my-4 w-full sm:w-auto text-[#FFFFFF]">
               <div>

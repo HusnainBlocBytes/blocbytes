@@ -96,7 +96,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      className="fixed inset-0  flex justify-center items-center ml-4 mr-4"
       onClick={onClose} // Close on clicking overlay
     >
       <div
@@ -116,7 +116,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         ) : (
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label className="block text-sm font-medium mb-2">Full Name*</label>
+              <label className="block text-sm font-medium mb-2">Full Name<span className='text-red-500'>*</span></label>
               <input
                 type="text"
                 name="fullName"
@@ -127,7 +127,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-sm font-medium mb-2">Company Name*</label>
+              <label className="block text-sm font-medium mb-2">Company Name<span className='text-red-500'>*</span></label>
               <input
                 type="text"
                 name="companyName"

@@ -145,7 +145,7 @@ const Section3 = () => {
           with you.
         </motion.p>
         <motion.p
-          className="lg:text-[65px] font-semibold text-[#FFFFFF] lg:leading-[84px] uppercase mt-4"
+          className="lg:text-[65px] text-[30px] font-semibold text-[#FFFFFF] lg:leading-[84px] uppercase mt-4"
           variants={fadeIn("right", 0.3)}
           initial="hidden"
           whileInView={"show"}
@@ -163,50 +163,14 @@ const Section3 = () => {
           backgroundPosition: "center",
         }}
       >
-        <p className="lg:text-[80px] font-semibold text-[#FFFFFF] lg:leading-[117px] font-inter max-w-lg">
-          <motion.span
-            variants={fadeIn("left", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            How
-          </motion.span>
+        <p className="lg:text-[80px] text-[50px] font-semibold text-[#FFFFFF] lg:leading-[117px] font-inter max-w-lg">
           <motion.span
             variants={fadeIn("left", 0.4)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
           >
-            {" "}
-            We
-          </motion.span>{" "}
-          <motion.span
-            variants={fadeIn("left", 0.6)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            {" "}
-            Make
-          </motion.span>
-          <motion.span
-            variants={fadeIn("left", 0.8)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            {" "}
-            It
-          </motion.span>
-          <motion.span
-            variants={fadeIn("left", 1.0)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            {" "}
-            Work
+            How We Make It Work
           </motion.span>
         </p>
       </div>

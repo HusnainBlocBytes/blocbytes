@@ -106,7 +106,7 @@ our business.
           2. Access And Update:{" "}
           <span className="font-[400] text-[16px]">
           ou may request access to or update your personal
-          information by contacting us at <Link className='text-[#D80A8B] hover:text-[#D80A8B]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link>
+          information by contacting us at <Link className='text-[#00add3] hover:text-[#03045E]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link>
           </span>
         </p>
         <h1 className="text-start font-[695] text-[20px] mt-4">
@@ -131,7 +131,7 @@ prior notification.
         </h1>
         <p className=" text-justify font-[400] text-[16px] mt-4 mb-4">
         If you have any questions or concerns about this Privacy Policy or our data practices,
-please contact us at  <Link className='text-[#D80A8B] hover:text-[#D80A8B]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link> <p><Link className='text-[#D80A8B] hover:text-[#D80A8B]' to="tel:+18483458762">or +18483458762</Link></p> 
+please contact us at  <Link className='text-[#00add3] hover:text-[#03045E]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link> <p><Link className='text-[#00add3] hover:text-[#03045E]' to="tel:+18483458762">or +18483458762</Link></p> 
 By using our website, you agree to the terms of this Privacy Policy. If you do not agree
 with these terms, please do not use our website.
         </p>
@@ -236,7 +236,7 @@ our business.
           2. Access And Update:{" "}
           <span className="font-[400] text-[16px]">
           You may request access to or update your personal
-          information by contacting us at <Link className='text-[#D80A8B] hover:text-[#D80A8B]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link>
+          information by contacting us at <Link className='text-[#00add3] hover:text-[#03045E]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link>
           </span>
         </p>
         <h1 className="font-[695] text-[20px] text-start mt-3 ml-2">
@@ -261,7 +261,7 @@ prior notification.
         </h1>
         <p className="font-[400] text-[16px] text-justify mt-3 ml-2 mr-2 mb-4">
         If you have any questions or concerns about this Privacy Policy or our data practices,
-please contact us at <Link className='text-[#D80A8B] hover:text-[#D80A8B]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link> <p><Link className='text-[#D80A8B] hover:text-[#D80A8B]' to="tel:+18483458762">or +18483458762</Link></p> or +18483458762
+please contact us at <Link className='text-[#00add3] hover:text-[#03045E]' to="mailto:info@blocbytes.com">info@blocbytes.com</Link> <p><Link className='text-[#00add3] hover:text-[#03045E]' to="tel:+18483458762">or +18483458762</Link></p> or +18483458762
 By using our website, you agree to the terms of this Privacy Policy. If you do not agree
 with these terms, please do not use our website
         </p>
